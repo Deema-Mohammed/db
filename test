@@ -1,34 +1,31 @@
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-SELECT TO_CHAR(SYSTIMESTAMP, 'WEEKDAY') FROM dual
+     DECLARE
+     dayName  VARCHAR2(100); -- declare
+BEGIN
+   SELECT  to_char(sysdate, 'D') INTO dayName FROM dual;
+  
+    dbms_output.Put_line(dayName); --display
+    
+If  dayName='7' Then 
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-SELECT TO_NUMBER(TO_CHAR(SYSTIMESTAMP, 'WEEKDAY')) FROM dual
+     dbms_output.Put_line('Hello all'); --display
+     
+     ElsIF  dayName ='6'Then 
+          dbms_output.Put_line('Hello deema'); --display
 
- v_dayNumber NUMBER(10);
- v_dayName Nvarchar2(1);
-v_dayNumber := TO_NUMBER(TO_CHAR(SYSTIMESTAMP, 'DW'));
-v_dayName := TO_CHAR(SYSTIMESTAMP, 'WEEKDAY');
+     
+     
+     
+     
+End if;
+    
+    
+    
+    
+    
+END;
 
--- SQLINES DEMO *** ay = 7.
-IF(v_dayNumber = 7 or v_dayNumber=2 or v_dayNumber=3 ) THEN 
-  	-- SQLINES DEMO *** EKDAY, GETDATE());
-	print 'Akram'
-else If(v_dayNumber =2) Then
-print v_dayNumber
-  	-- SQLINES DEMO *** EKDAY, GETDATE());
-	else If(v_dayNumber =3) Then
-		-- SQLINES LICENSE FOR EVALUATION USE ONLY
-		SELECT TO_CHAR(SYSTIMESTAMP, 'WEEKDAY') FROM dual;
-	  else If(v_dayNumber =4) Then
-		-- SQLINES LICENSE FOR EVALUATION USE ONLY
-		SELECT TO_CHAR(SYSTIMESTAMP, 'WEEKDAY') FROM dual;
-	   else If(v_dayNumber =5) Then
-		-- SQLINES LICENSE FOR EVALUATION USE ONLY
-		SELECT TO_CHAR(SYSTIMESTAMP, 'WEEKDAY') FROM dual;
-	    else If(v_dayNumber =6) Then
-	-- SQLINES LICENSE FOR EVALUATION USE ONLY
-	SELECT TO_CHAR(SYSTIMESTAMP, 'WEEKDAY') FROM dual;
-END IF;
-	-- SQLINES DEMO *** mber =7)
-	-- SQLINES DEMO *** EKDAY, GETDATE());
+
+
+
+    
